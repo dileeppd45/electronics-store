@@ -1,0 +1,94 @@
+{% extends 'login_home.html' %}
+{% block content %}
+<br><br><br>
+<html lang="en">
+<style>
+ input[type=submit]{
+ font-size: 13px;
+  border-radius: 20px;
+  padding: 12px 20px;
+  background-color: #00b4c6;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.25px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+input[type=submit]:hover {
+  background-color: #0088e8;
+}
+</style>
+<body>
+<div align="center"  class="contact-form">
+  <div class="container">
+      <h2 style="color:white" >TOUR AGENCY REGISTRATION</h2>
+            <div class="row">
+                <div class="col-lg-7 col-md-12 col-sm-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <img src="../static/assets/images/img.png" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+                <div class="right-text col-lg-5 col-md-12 col-sm-12 mobile-top-fix">
+                    <div class="left-heading">
+                    </div>
+                    <div class="left-text"><br><br><br><br>
+                      <form id="form1" name="form1" method="post" action="/login">
+                        {% csrf_token %}
+                          <table align="center" width="200" border="0" >
+                            <tr>
+                              <td colspan="1" align="right">
+
+                              </td>
+                            </tr>
+                            <tr>
+                              <td colspan="2">&nbsp;</td>
+                            </tr>
+                            <tr>
+                              <th style="color:white">Agent Id &nbsp;&nbsp;&nbsp;&nbsp;</th>
+                              <td><label for="uname"></label>
+                              <input type="text" name="name" id="uname" align="center" class="form-control" required/></td>
+                            </tr>
+                               <tr>
+                              <th style="color:white">Address &nbsp;&nbsp;&nbsp;&nbsp;</th>
+                              <td><label for="uname"></label>
+                              <input type="text" name="address" id="uname" align="center" class="form-control" required/></td>
+                            </tr>
+                               <tr>
+                              <th style="color:white">Email &nbsp;&nbsp;&nbsp;&nbsp;</th>
+                              <td><label for="uname"></label>
+                              <input type="text" name="email" id="uname" align="center" class="form-control" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/></td>
+                            </tr>
+                               <tr>
+                              <th style="color:white">Phone &nbsp;&nbsp;&nbsp;&nbsp;</th>
+                              <td><label for="uname"></label>
+                              <input type="text" name="phone" id="uname" align="center" class="form-control" required pattern="[6-9]{1}[0-9]{9}"/></td>
+                            </tr>
+
+                            <tr>
+                              <th style="color:white">Password&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                              <td><label for="passwd"></label>
+                              <input type="password" name="password" id="passwd" align="center" class="form-control" required/></td>
+                            </tr>
+                            <tr>
+                              <th></th>
+
+                              <td><input  name="login" type="submit" id="login" value="Register"  class="main-button-slider "/></td>
+                            </tr>
+                          </table>
+                      </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hr"></div>
+                </div>
+            </div>
+        </div>
+
+</div>
+</body>
+
+</html>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'electronics/index.html'%}
+{% block content %}
+
+<div class="card" style="margin-left:100px; min-height:100vh;" >
+                  <div class="card-body">
+                    <center><br><br>
+
+                    </center><br><br>
+                      <div class="table-responsive">
+                          <center> <h2 class="card-title">VIEW FEEDBACKS</h2></center><br>
+                      <table class="table">
+
+                        <thead>
+                          <tr>
+                              <th><h5>No.</h5></th>
+                              <th><h5>USER</h5></th>
+                              <th><h5>FEEDBACK</h5></th>
+                              <th><h5>POSTED DATE</h5></th>
+                              <th><h5>REPLY</h5></th>
+                              <TH></TH>
+
+                          </tr>
+                        </thead>
+                        {% for i in data %}
+                        <tbody>
+                          <tr>
+                              <td><h5>{{ forloop.counter }}</h5></td>
+                              <td><h5>{{i.5}}</h5></td>
+                              <td><h5>{{i.3}}</h5></td>
+                              <td><h5>{{i.2}}</h5></td>
+                              <td><h5>{{i.4}}</h5></td>
+<!--                              -->
+
+                              <td><a href="../reply_feed/{{i.0}}"><div class="badge badge-outline-warning">reply</div></a></td>
+<!--                              <td><a href="../delete_staff/{{i.0}}"><div class="badge badge-outline-warning">Delete Staff</div></a></td>-->
+
+                          </tr>
+                        </tbody>
+                        {% endfor %}
+                      </table>
+                    </div>
+                  </div>
+</div>
+
+{% endblock %}
