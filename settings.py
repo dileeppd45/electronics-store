@@ -78,8 +78,8 @@ DATABASES = {
     'default': {
         'NAME': 'electronic_store',
         'ENGINE': 'django.db.backends.mysql',
-        'USER': 'agosh',
-        'PASSWORD': 'sdf#$324das#$%',
+        'USER': '#####',
+        'PASSWORD': '#####',
         'HOST': '103.39.135.171',
         'PORT': '3306',
         'OPTIONS': {
